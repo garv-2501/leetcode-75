@@ -5,7 +5,8 @@ class Solution:
         if (str1 + str2 == str2 + str1):
             x = math.gcd(len(str1), len(str2))
             return str1[:x]
-        
+        else:
+            return ""
         
 trial = Solution()
 print(trial.gcdOfStrings("AB", "ABABAB"))

@@ -4,19 +4,27 @@ class Solution:
 
         counter = 0
         
-        if len(flowerbed) < 2:
-            if (flowerbed[0] == 0):
-                counter +=1
-        else:    
+        if len(flowerbed) >= 3:
             if temp_flowerbed[0] == 0 and temp_flowerbed[1] == 0:
                 counter +=1
+                temp_flowerbed[0] = 1
             if temp_flowerbed[-1] == 0 and temp_flowerbed[-2] == 0:
                 counter +=1
+                temp_flowerbed[-1] = 1
             
             for i in range(1, len(flowerbed)-1):
                 if temp_flowerbed[i-1] == 0 and temp_flowerbed[i] == 0 and temp_flowerbed[i+1] == 0:
                     temp_flowerbed[i] = 1
                     counter += 1
+        elif len(flowerbed) == 2:
+            if temp_flowerbed[0] == 0 and temp_flowerbed[1] == 0:
+                counter = 1
+                temp_flowerbed[0] == 1
+        elif len(flowerbed) == 1:
+            if temp_flowerbed[0] == 0:
+                counter = 1
+                temp_flowerbed[0] == 1
+                
                 
         print(counter)
         if n > counter:

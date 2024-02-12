@@ -1,5 +1,5 @@
 class Solution:
-    def kidsWithCandies(self, candies: list[int], extraCandies: int) -> List[bool]:
+    def kidsWithCandies(self, candies: list[int], extraCandies: int) -> list[bool]:
         tempCandies = []
         for i in range(len(candies)):
             tempCandies.append(candies[i] + extraCandies)
